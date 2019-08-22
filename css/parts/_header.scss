@@ -1,0 +1,92 @@
+.page-header {
+     position: relative;
+     margin: 0;
+     padding-top: 60px;
+     padding-bottom: 60px;
+     background-color: $lighterGrey;
+     border-bottom: 2px solid #F4f4f9;
+
+     .background-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-position: center;
+          background-size: cover;
+
+          &:after {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(33, 38, 49, 0.3)), to(transparent));
+               background-image: linear-gradient(to top, rgba(33, 38, 49, 0.3) 0%, transparent 100%);          
+          }
+     }
+}
+
+#post-header {
+     &.page-header {
+          padding-top: 120px;
+
+          h1 {
+               color: white;
+          }
+     }
+}
+
+.page-header {
+     h1 {
+          text-transform: capitalize;
+          margin-bottom: 0px;
+     }
+
+     .post-meta {
+          margin: 15px 0px;
+
+          .post-date {
+               color: $lightGrey;
+          }
+     }
+
+     .page-header-breadcrumb {
+          margin: 15px 0px;
+
+          li {
+               display: inline-block;
+               font-size: 13px;
+               text-transform: capitalize;
+               color: $darkGrey;
+
+               a {
+                    font-size: 13px;
+                    text-transform: capitalize;
+                    color: $darkGrey;
+                    -webkit-transition: 0.2s color;
+                    transition: 0.2s color;
+
+                    &:hover, &:focus {
+                         color: #0b0f28;
+                         text-decoration: none;
+                    }
+               }
+
+               + li {
+                    &:before {
+                         content: '/';
+                         display: inline-block;
+                         margin: 0px 10px;                    
+                    }
+               }
+          }
+     }
+}
+
+@media only screen and (max-width: 767px) {
+     .page-header h1 {
+          font-size: 28px;
+     }
+}

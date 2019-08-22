@@ -1,0 +1,38 @@
+.post {
+     &.post-thumb {
+          position: relative;
+
+          .post-img {
+               &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    background: -webkit-gradient(linear, left bottom, left top, from(rgba(33, 38, 49, 0.3)), to(transparent));
+                    background: linear-gradient(to top, rgba(33, 38, 49, 0.3) 0%, transparent 100%);
+               }
+          }
+
+          .post-body {
+               position: absolute;
+               bottom: 0px;
+               padding: 20px 15px;
+          }
+
+          .post-meta {
+               .post-date {
+                    color: $lightGrey;
+               }
+          }
+
+          .post-title {
+               font-size: 22px;
+
+               a {
+                    color: white;
+               }
+          }
+     }
+}
